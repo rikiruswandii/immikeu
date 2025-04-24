@@ -15,7 +15,7 @@
     }
 
     #theme-toggle:not(:checked) + label {
-        @apply bg-amber-400;
+        @apply bg-fuchsia-500;
     }
 
     #theme-toggle:checked + label {

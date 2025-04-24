@@ -40,5 +40,8 @@
 		"typescript-eslint": "^8.20.0",
 		"vite": "^6.2.5",
 		"vitest": "^3.0.0"
+	},
+	"dependencies": {
+		"@google/model-viewer": "^4.1.0"
 	}
 }

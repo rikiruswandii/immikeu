@@ -1,6 +1,96 @@
-<section class="py-20 text-center">
-	<h2 class="text-4xl font-bold mb-4">Halo, saya [Nama Kamu]</h2>
-	<p class="text-lg text-gray-600">
-		Saya adalah web developer yang fokus pada frontend & backend development.
-	</p>
+<script lang="ts">
+	import { onMount } from 'svelte';
+	import { PUBLIC_SITE_NAME } from '$env/static/public';
+	import { fly, fade } from 'svelte/transition';
+
+	let isClient = false;
+	const siteName = PUBLIC_SITE_NAME || 'Website Kami';
+
+	onMount(async () => {
+		isClient = true;
+		await import('@google/model-viewer');
+	});
+</script>
+
+<section
+	class="w-full min-h-screen py-20 text-center bg-surface-light dark:bg-surface-dark relative overflow-hidden"
+>
+	<header>
+		{#if isClient}
+			<model-viewer
+				src="/models/icecream.glb"
+				alt="3D Ice Cream"
+				auto-rotate
+				camera-controls
+				shadow-intensity="1"
+				exposure="0.9"
+				disable-pan
+				disable-zoom
+				style="position: absolute; top: 50%; left: 20%; transform: translate(-50%, -50%); width: 600px; height: 400px; z-index: 100;"
+			></model-viewer>
+		{/if}
+		<h1
+			in:fly={{ y: 20, duration: 800, opacity: 0 }}
+			class="font-bold text-9xl mb-4 text-text-primary-light dark:text-text-primary-dark absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 float z-10"
+		>
+			I'm <span class="text-secondary-light dark:text-secondary-dark">{siteName}</span>
+		</h1>
+
+		<!-- Efek sinar -->
+		<div
+			class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-full h-48 mb-6 z-10"
+		>
+			<div
+				class="absolute inset-0 bg-gradient-to-t from-primary-light via-transparent to-transparent opacity-60 blur-xl animate-pulse"
+			></div>
+			<div
+				class="absolute inset-0 bg-gradient-to-r from-primary-light via-transparent to-transparent opacity-60 blur-xl animate-pulse"
+			></div>
+			<div
+				class="absolute inset-0 bg-gradient-to-l from-primary-light via-transparent to-transparent opacity-60 blur-xl animate-pulse"
+			></div>
+			<div
+				class="absolute inset-0 bg-gradient-to-b from-primary-light via-transparent to-transparent opacity-60 blur-xl animate-pulse"
+			></div>
+		</div>
+	</header>
+
+	<article
+		in:fade={{ duration: 1000 }}
+		class="z-10 absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
+	>
+		<p class="text-xl text-text-primary-light dark:text-text-primary-dark">
+			EYYOO.. My Name Is <span class="text-secondary-light dark:text-secondary-light">Riki Ruswandi</span>, Welcome To My Personal Website
+		</p>
+		<div class="relative inline-flex group mt-8">
+			<div
+				class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
+			></div>
+			<a
+				href="/"
+				title="Get quote now"
+				class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
+				role="button"
+				>Resume
+			</a>
+		</div>
+	</article>
 </section>
+
+<style>
+	@keyframes float {
+		0% {
+			transform: translateY(0px);
+		}
+		50% {
+			transform: translateY(-10px);
+		}
+		100% {
+			transform: translateY(0px);
+		}
+	}
+
+	.float {
+		animation: float 3s ease-in-out infinite;
+	}
+</style>

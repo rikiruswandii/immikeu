@@ -7,11 +7,13 @@
 	import Footer from '$lib/Components/Footer.svelte';
 </script>
 
-<Header />
-<main class="container mx-auto px-4">
-	<Hero />
-	<About />
-	<Portfolio />
-	<slot />
-</main>
-<Footer />
+<div class=" bg-surface-light dark:bg-surface-dark">
+	<Header />
+	<main>
+		<Hero />
+		<About />
+		<Portfolio />
+		<slot />
+	</main>
+	<Footer />
+</div>
