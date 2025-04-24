@@ -1,10 +1,10 @@
 <script lang="ts">
 	import '../app.css';
-	import Header from '$lib/components/Header.svelte';
-	import Hero from '$lib/components/Hero.svelte';
-	import About from '$lib/components/About.svelte';
-	import Portfolio from '$lib/components/Portfolio.svelte';
-	import Footer from '$lib/components/Footer.svelte';
+	import Header from '$lib/Components/Header.svelte';
+	import Hero from '$lib/Components/Hero.svelte';
+	import About from '$lib/Components/About.svelte';
+	import Portfolio from '$lib/Components/Portfolio.svelte';
+	import Footer from '$lib/Components/Footer.svelte';
 </script>
 
 <Header />
