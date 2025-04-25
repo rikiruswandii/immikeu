@@ -1,13 +1,13 @@
 <script lang="ts">
 	import '../app.css';
-	import Header from '$lib/Components/Header.svelte';
 	import Hero from '$lib/Components/Hero.svelte';
 	import About from '$lib/Components/About.svelte';
 	import Portfolio from '$lib/Components/Portfolio.svelte';
 	import Footer from '$lib/Components/Footer.svelte';
+	import Header from '$lib/Components/Header.svelte';
 </script>
 
-<div class=" bg-surface-light dark:bg-surface-dark">
+<div class="relative w-full bg-surface-light dark:bg-surface-dark">
 	<Header />
 	<main>
 		<Hero />

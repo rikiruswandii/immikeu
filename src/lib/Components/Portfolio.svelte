@@ -3,9 +3,11 @@
 		{
 			title: 'Emameun',
 			image: '/images/emameun.jpg',
-			description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum facere magni at. Quo illo iure recusandae. Magnam, maiores perspiciatis ipsa eos sapiente voluptatibus quam asperiores odio suscipit itaque, doloribus impedit.',
-			teckstack: ['Vue', 'Tailwind CSS']
-		},
+			description:
+				'A modern and responsive Food Market website built with Vue.js and Tailwind CSS. Features include product catalog, food details, and an interactive shopping cart.',
+			teckstack: ['Vue', 'Tailwind CSS'],
+			url: 'https://emameun.vercel.app/'
+		}
 	];
 </script>
 
@@ -48,11 +50,39 @@
 						<div
 							class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
 						></div>
+
 						<a
-							href="/"
-							class="relative inline-flex items-center justify-center px-6 py-2 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-							role="button"
-							>View demo..
+							href={project.url} role="button"
+							class="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block"
+						>
+							<span class="absolute inset-0 overflow-hidden rounded-full">
+								<span
+									class="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+								></span>
+							</span>
+							<div
+								class="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-0.5 px-4 ring-1 ring-white/10"
+							>
+								<span>Live demo..</span>
+								<svg
+									width="16"
+									height="16"
+									viewBox="0 0 24 24"
+									fill="none"
+									xmlns="http://www.w3.org/2000/svg"
+								>
+									<path
+										stroke="currentColor"
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth="1.5"
+										d="M10.75 8.75L14.25 12L10.75 15.25"
+									></path>
+								</svg>
+							</div>
+							<span
+								class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"
+							></span>
 						</a>
 					</div>
 				</div>
