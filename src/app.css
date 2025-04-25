@@ -51,7 +51,7 @@
 	--animate-third: 'moveInCircle 40s linear infinite';
 	--animate-fourth: 'moveHorizontal 40s ease infinite';
 	--animate-fifth: 'moveInCircle 20s ease infinite';
-  --animete-spotlight: 'spotlight 2s ease .75s 1 forwards';
+  --animate-spotlight: 'spotlight 2s ease .75s 1 forwards';
   
  @keyframes moveHorizontal {
   0% {

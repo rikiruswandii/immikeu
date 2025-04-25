@@ -7,7 +7,7 @@
 	import Header from '$lib/Components/Header.svelte';
 </script>
 
-<div class="relative w-full bg-surface-light dark:bg-surface-dark">
+<div class="bg-surface-light dark:bg-surface-dark">
 	<Header />
 	<main>
 		<Hero />
