@@ -5,7 +5,7 @@
 	import { WavyBackground } from './ui/WavyBackground';
 
 	let isClient = false;
-	const siteName = PUBLIC_SITE_NAME || 'Website Kami';
+	const siteName = PUBLIC_SITE_NAME || 'Mikeu';
 
 	onMount(async () => {
 		isClient = true;
@@ -13,9 +13,10 @@
 	});
 </script>
 
-<WavyBackground className="pb-40">
-	<div
-		class="py-20 text-center overflow-hidden flex flex-col justify-center items-center"
+<WavyBackground blur={8} className="pb-40">
+	<section
+		id="#home"
+		class="py-20 text-center flex flex-col justify-center items-center"
 	>
 		<header
 			class="grid grid-cols-[auto_1fr_auto] items-center gap-4 w-full max-w-7xl mx-auto px-4 relative"
@@ -51,25 +52,55 @@
 			in:fade={{ duration: 1000 }}
 			class="z-10 absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 		>
-			<p class="text-xl font-normal text-neutral-300">
-				EYYOO.. My Name Is <span class="font-semibold"
-					>Riki Ruswandi</span
-				>, Welcome To My Personal Website
+			<p class="max-w-9xl text-2xl font-normal text-neutral-300">
+				EYYOO.. My Name Is <span class="font-semibold">Riki Ruswandi</span>, Welcome To My Personal
+				Website
 			</p>
-			<div class="relative inline-flex group mt-8">
-				<div
-					class="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
-				></div>
-				<a
-					href="/"
-					title="Get quote now"
-					class="relative inline-flex items-center justify-center px-8 py-4 text-lg font-bold text-white transition-all duration-200 bg-gray-900 font-pj rounded-xl focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-900"
-					role="button"
-					>Resume
-				</a>
+			<!-- Tombol Demo -->
+			<div class="flex justify-center mt-8">
+				<div class="relative inline-flex group">
+					<div
+						class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
+					></div>
+
+					<a
+						href="/"
+						role="button"
+						class="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block"
+					>
+						<span class="absolute inset-0 overflow-hidden rounded-full">
+							<span
+								class="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+							></span>
+						</span>
+						<div
+							class="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-3 px-7 ring-1 ring-white/10"
+						>
+							<span class="text-xl text-neutral-300">Resume</span>
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 16 20"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									stroke="currentColor"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="1.5"
+									d="M10.75 8.75L14.25 12L10.75 15.25"
+								></path>
+							</svg>
+						</div>
+						<span
+							class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"
+						></span>
+					</a>
+				</div>
 			</div>
 		</article>
-	</div>
+	</section>
 </WavyBackground>
 
 <style>

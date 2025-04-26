@@ -1,25 +1,114 @@
-<script>
-	import { SpotLight } from './ui/SpotLight';
-</script>
-
 <section
 	id="about"
-	class="relative flex h-[40rem] overflow-hidden rounded-md bg-black/[0.96] px-16 antialiased bg-grid-white/[0.02] md:items-center md:justify-center lg:px-32"
+	class="relative flex min-h-screen overflow-hidden rounded-md bg-black/[0.96] px-6 sm:px-10 md:px-20 lg:px-48 xl:px-60 2xl:px-72 antialiased bg-grid-white/[0.02] md:items-center md:justify-center"
 >
-	<SpotLight className="-top-40 left-0 md:left-60 md:-top-20" fill="white" />
-	<div class=" relative z-10 mx-auto w-full max-w-7xl p-4 pt-20 md:pt-0">
-		<h1
-			class="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-4xl font-bold text-transparent md:text-7xl"
+	<div class="absolute top-0 left-0 z-0 blur-3xl xl:top-10" aria-hidden="true">
+		<div
+			class="aspect-1155/678 w-[40rem] bg-gradient-to-bl from-[#ff80b5] to-[#9089fc] opacity-30"
+			style="clip-path: polygon(
+      0% 0%, 
+      25% 0%, 
+      35% 10%, 
+      50% 5%, 
+      65% 15%, 
+      70% 30%, 
+      60% 45%, 
+      45% 55%, 
+      30% 60%, 
+      20% 50%, 
+      10% 40%, 
+      5% 25%, 
+      0% 20%
+    )"
+		></div>
+	</div>
+
+	<div class="relative z-10 mx-auto min-w-full p-4 pt-20 md:pt-0">
+		<div class="flex justify-center mb-8">
+			<h1
+				data-aos="fade-up"
+				data-aos-duration="1000"
+				data-aos-offset="100"
+				data-aos-easing="ease-in-out"
+				class="inline-flex box-decoration-slice bg-gradient-to-r from-blue-400 to-pink-500 text-white px-2 text-center text-6xl font-bold md:text-7xl rounded"
+			>
+				WHO am I?
+			</h1>
+		</div>
+		<p
+			data-aos="fade-up"
+			data-aos-delay="100"
+			data-aos-offset="100"
+			data-aos-easing="ease-in-out"
+			class="mx-auto mt-4 max-w-4xl text-justify text-3xl font-normal text-neutral-300"
 		>
-			WHO am I?
-		</h1>
-		<p class="mx-auto mt-4 max-w-4xl text-center text-xl font-normal text-neutral-300">
-			Hello! I’m <strong class="font-semibold">Riki Ruswandi</strong>, a Web Developer and student
-			at
-			<span class="font-medium">STMIK Mardira Indonesia</span>. I focus on modern web development
-			and strive to create digital solutions that are both functional and user-friendly. If you're
-			interested in collaborating or discussing technology, I'm always open to new opportunities and
-			conversations.
+			<strong class="font-semibold text-4xl">Hi! I'm Riki Ruswandi, also known as Mikeu.</strong><br
+			/><br />
+			My journey in web development began in 2022 during my college years when I joined an internship
+			program at Dikominfo Purwakarta, Indonesia. That experience ignited my passion for the IT world
+			and led me to start working on independent projects. Through hands-on experience, I refined my
+			skills and developed a deep enthusiasm for creating digital solutions. I am excited by the continuous
+			growth and challenges in the dynamic field of web development.<br /><br />
+			Currently, I specialize in delivering high-quality solutions that not only meet but exceed client
+			expectations at PST.<br /><br />
+			I am also pursuing a bachelor's degree in Informatics Engineering at
+			<span class="font-medium">STMIK Mardira Indonesia</span>.
 		</p>
+
+		<!-- Tombol Demo -->
+		<div class="flex justify-center mt-8">
+			<div
+				data-aos="fade-up"
+				data-aos-delay="200"
+				data-aos-offset="100"
+				data-aos-easing="ease-in-out"
+				class="relative inline-flex group"
+			>
+				<div
+					class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
+				></div>
+
+				<a
+					href="/"
+					role="button"
+					class="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block"
+				>
+					<span class="absolute inset-0 overflow-hidden rounded-full">
+						<span
+							class="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+						></span>
+					</span>
+					<div
+						class="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-3 px-7 ring-1 ring-white/10"
+					>
+						<span class="text-xl text-neutral-300">Read more..</span>
+						<svg
+							width="24"
+							height="24"
+							viewBox="0 0 16 20"
+							fill="none"
+							xmlns="http://www.w3.org/2000/svg"
+						>
+							<path
+								stroke="currentColor"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth="1.5"
+								d="M10.75 8.75L14.25 12L10.75 15.25"
+							></path>
+						</svg>
+					</div>
+					<span
+						class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"
+					></span>
+				</a>
+			</div>
+		</div>
+	</div>
+	<div class="absolute bottom-0 right-0 z-0 blur-3xl xl:-bottom-6" aria-hidden="true">
+		<div
+			class="aspect-1155/678 w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+			style="clip-path: polygon(74.1% 44.1%, 100% 61.6%, 97.5% 26.9%, 85.5% 0.1%, 80.7% 2%, 72.5% 32.5%, 60.2% 62.4%, 52.4% 68.1%, 47.5% 58.3%, 45.2% 34.5%, 27.5% 76.7%, 0.1% 64.9%, 17.9% 100%, 27.6% 76.8%, 76.1% 97.7%, 74.1% 44.1%)"
+		></div>
 	</div>
 </section>

@@ -1,2 +1,12 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://svelte.dev/docs/kit">svelte.dev/docs/kit</a> to read the documentation</p>
+<script lang="ts">
+	import Hero from '$lib/Components/Hero.svelte';
+	import About from '$lib/Components/About.svelte';
+	import Portfolio from '$lib/Components/Portfolio.svelte';
+	import { Divider } from '$lib/Components/ui/Divider';
+</script>
+
+<Hero />
+<Divider />
+<About />
+<Divider />
+<Portfolio />
