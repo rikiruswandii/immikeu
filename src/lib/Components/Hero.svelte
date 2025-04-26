@@ -14,10 +14,25 @@
 </script>
 
 <WavyBackground blur={8} className="pb-40">
-	<section
-		id="#home"
-		class="py-20 text-center flex flex-col justify-center items-center"
-	>
+	<section id="#home" class="py-20 text-center flex flex-col justify-center items-center">
+		<div
+			data-aos="fade-down"
+			data-aos-duration="1000"
+			data-aos-offset="150"
+			data-aos-easing="ease-in-out"
+			class="absolute inset-x-0 -top-90 z-0 blur-3xl"
+			aria-hidden="true"
+		>
+			<div
+				class="aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#38bdf8] to-[#e879f9] opacity-30"
+				style="clip-path: polygon(
+            0% 20%, 10% 10%, 30% 0%, 50% 10%, 70% 5%, 
+            90% 15%, 100% 30%, 90% 40%, 80% 45%, 70% 40%, 
+            50% 40%, 30% 50%, 10% 40%, 0% 30%
+        )"
+			></div>
+		</div>
+
 		<header
 			class="grid grid-cols-[auto_1fr_auto] items-center gap-4 w-full max-w-7xl mx-auto px-4 relative"
 		>
@@ -39,7 +54,7 @@
 
 			<h1
 				in:fly={{ y: 20, duration: 800, opacity: 0 }}
-				class="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-400 bg-clip-text text-center text-[12rem] font-bold text-transparent md:text-[12rem] antialiased float"
+				class="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-200 text-shadow-lg/20 bg-clip-text text-center text-[12rem] font-bold text-transparent md:text-[12rem] antialiased float"
 			>
 				I'm <span>{siteName}</span>
 			</h1>
@@ -52,7 +67,7 @@
 			in:fade={{ duration: 1000 }}
 			class="z-10 absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
 		>
-			<p class="max-w-9xl text-2xl font-normal text-neutral-300">
+			<p class="max-w-9xl text-2xl font-normal text-neutral-300 text-shadow-lg/15">
 				EYYOO.. My Name Is <span class="font-semibold">Riki Ruswandi</span>, Welcome To My Personal
 				Website
 			</p>
@@ -100,6 +115,25 @@
 				</div>
 			</div>
 		</article>
+		<div
+			data-aos="fade-up"
+			data-aos-duration="1000"
+			data-aos-offset="150"
+			data-aos-easing="ease-in-out"
+			class="absolute inset-x-0 -bottom-[500px] z-0 blur-3xl"
+			aria-hidden="true"
+		>
+			<div
+				class="aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#38bdf8] to-[#e879f9] opacity-30"
+				style="clip-path: polygon(
+        0% 50%, 5% 45%, 10% 48%, 15% 42%, 20% 45%, 
+        30% 40%, 40% 43%, 50% 38%, 60% 42%, 70% 35%, 
+        80% 38%, 90% 33%, 100% 36%, 100% 66%, 90% 63%, 
+        80% 68%, 70% 63%, 60% 68%, 50% 62%, 40% 67%, 
+        30% 62%, 20% 65%, 15% 60%, 10% 63%, 5% 58%, 0% 60%
+    )"
+			></div>
+		</div>
 	</section>
 </WavyBackground>
 

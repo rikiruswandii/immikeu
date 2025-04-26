@@ -8,7 +8,7 @@
 		faBootstrap,
 		faReact
 	} from '@fortawesome/free-brands-svg-icons';
-	import { faLeaf, faN } from '@fortawesome/free-solid-svg-icons';
+	import { faC, faLeaf, faN } from '@fortawesome/free-solid-svg-icons';
 	import { AnimatedTooltip } from './ui/AnimatedTooltip';
 
 	let data = [
@@ -114,7 +114,32 @@ Moreover, UPI DI JATILUHUR also provides a complaint feature, allowing the commu
 			],
 			url: 'https://github.com/rikiruswandii/mapin-aja',
 			isExpanded: false
-		}
+		},
+		{
+			title: 'Investasi Purwakarta',
+			image: '/images/investasi.jpg',
+			description:
+				'Investasi Purwakarta is a platform designed to facilitate the management and monitoring of various investments in the Purwakarta area, featuring project management tools that allow users to add, edit, and delete information related to investment projects. It also includes search and filter capabilities to find projects based on specific criteria such as category, location, and status. The platform offers data visualization, displaying investment project information in table and map formats, and user authentication, enabling access to further features after logging in.',
+			teckstack: [
+				{
+					name: 'Codeigniter 4',
+					icon: faC,
+					url: 'codeigniter.com'
+				},
+				{
+					name: 'Bootstrap',
+					icon: faBootstrap,
+					url: 'bootstrap.com'
+				},
+				{
+					name: 'Leaflet',
+					icon: faLeaf,
+					url: 'leafletjs.com'
+				}
+			],
+			url: 'https://investasi.purwakartakab.go.id/',
+			isExpanded: false
+		},
 	];
 </script>
 
