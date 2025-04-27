@@ -31,14 +31,14 @@
 			showNavbar ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
 		}`}
 	>
-	<div
-		class="absolute transitiona-all duration-1000 opacity-60 -inset-px bg-gradient-to-r from-[#38bdf8] via-[#e879f9] to-[#22d3ee] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
-	></div>
-		
+		<div
+			class="absolute transitiona-all duration-1000 opacity-60 -inset-px bg-gradient-to-r from-[#38bdf8] via-[#e879f9] to-[#22d3ee] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
+		></div>
+
 		<NavbarMenu>
-			<HoveredLink href="#home">Home</HoveredLink>
-			<HoveredLink href="#about">About</HoveredLink>
-			<HoveredLink href="#project">Project</HoveredLink>
+			<HoveredLink href="#home" target="_self">Home</HoveredLink>
+			<HoveredLink href="#about" target="_self">About</HoveredLink>
+			<HoveredLink href="#project" target="_self">Project</HoveredLink>
 			<MenuItem {active} item="Contact">
 				<div class="flex flex-col space-y-4 text-sm">
 					<HoveredLink href="https://www.linkedin.com/in/riki-ruswandi/" target="_blank"

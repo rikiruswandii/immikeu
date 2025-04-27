@@ -7,6 +7,8 @@
 	import Header from '$lib/Components/Header.svelte';
 	import AOS from 'aos';
 	import 'aos/dist/aos.css';
+	
+	let { children } = $props();
 
 	// Inisialisasi AOS saat mount
 	import { onMount } from 'svelte';
@@ -21,7 +23,7 @@
 <div class="bg-black/[0.96]">
 	<Header />
 	<main>
-		<slot />
+		{@render children()}
 	</main>
 	<Footer />
 </div>

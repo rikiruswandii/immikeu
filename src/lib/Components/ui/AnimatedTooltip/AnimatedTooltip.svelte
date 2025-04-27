@@ -55,10 +55,10 @@
 			>
 				<div
 					class="absolute inset-x-10 -bottom-px z-30 h-px w-[20%] bg-gradient-to-r from-transparent via-emerald-500 to-transparent"
-				/>
+				></div>
 				<div
 					class="absolute -bottom-px left-10 z-30 h-px w-[40%] bg-gradient-to-r from-transparent via-sky-500 to-transparent"
-				/>
+				></div>
 				<div class="relative z-30 whitespace-nowrap text-base font-bold text-white">
 					{text}
 				</div>

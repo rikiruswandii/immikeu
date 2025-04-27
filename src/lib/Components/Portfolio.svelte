@@ -60,11 +60,7 @@
 		{
 			title: 'Unit Pengelolaan Irigasi D.I Jatiluhur',
 			image: '/images/upidijatiluhur.jpg',
-			description: `Website developed for the Irrigation Management Unit (UPI) in the Jatiluhur region, with the aim of providing information and services related to irrigation. The website features two main pages: the Landing Page and the Dashboard Page. These pages offer various features to facilitate the management and monitoring of the irrigation system in Jatiluhur.
-
-In addition, UPI DI JATILUHUR includes a key mapping feature that allows users to view maps related to the irrigation system in the Jatiluhur region. This mapping feature makes it easier to monitor the condition of irrigation channels, water distribution points, and other related data visually, helping in more informed decision-making for irrigation management.
-
-Moreover, UPI DI JATILUHUR also provides a complaint feature, allowing the community to report issues or damages related to irrigation in their area. Users can submit complaints about blocked, damaged, or other irrigation-related problems, which will be forwarded to the relevant authorities for follow-up, ensuring that the irrigation system functions optimally.`,
+			description: 'Website developed for the Irrigation Management Unit (UPI) in the Jatiluhur region, with the aim of providing information and services related to irrigation. The website features two main pages: the Landing Page and the Dashboard Page. These pages offer various features to facilitate the management and monitoring of the irrigation system in Jatiluhur. In addition, UPI DI JATILUHUR includes a key mapping feature that allows users to view maps related to the irrigation system in the Jatiluhur region. This mapping feature makes it easier to monitor the condition of irrigation channels, water distribution points, and other related data visually, helping in more informed decision-making for irrigation management. Moreover, UPI DI JATILUHUR also provides a complaint feature, allowing the community to report issues or damages related to irrigation in their area. Users can submit complaints about blocked, damaged, or other irrigation-related problems, which will be forwarded to the relevant authorities for follow-up, ensuring that the irrigation system functions optimally.',
 			teckstack: [
 				{
 					name: 'Laravel',
