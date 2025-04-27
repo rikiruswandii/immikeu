@@ -36,9 +36,9 @@
 		></div>
 
 		<NavbarMenu>
-			<HoveredLink href="#home" target="_self">Home</HoveredLink>
-			<HoveredLink href="#about" target="_self">About</HoveredLink>
-			<HoveredLink href="#project" target="_self">Project</HoveredLink>
+			<HoveredLink href="/#home" target="_self">Home</HoveredLink>
+			<HoveredLink href="/#about" target="_self">About</HoveredLink>
+			<HoveredLink href="/#project" target="_self">Project</HoveredLink>
 			<MenuItem {active} item="Contact">
 				<div class="flex flex-col space-y-4 text-sm">
 					<HoveredLink href="https://www.linkedin.com/in/riki-ruswandi/" target="_blank"

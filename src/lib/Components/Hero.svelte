@@ -24,7 +24,7 @@
 			aria-hidden="true"
 		>
 			<div
-				class="aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#38bdf8] to-[#e879f9] opacity-30"
+				class="aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#38bdf8] to-[#e879f9] opacity-30 animate-spotlight"
 				style="clip-path: polygon(
             0% 20%, 10% 10%, 30% 0%, 50% 10%, 70% 5%, 
             90% 15%, 100% 30%, 90% 40%, 80% 45%, 70% 40%, 
@@ -79,7 +79,7 @@
 					></div>
 
 					<a
-						href="/"
+						href="/resume"
 						role="button"
 						class="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block"
 					>
@@ -124,7 +124,7 @@
 			aria-hidden="true"
 		>
 			<div
-				class="aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#38bdf8] to-[#e879f9] opacity-30"
+				class="aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#38bdf8] to-[#e879f9] opacity-30 animate-spotlight"
 				style="clip-path: polygon(
         0% 50%, 5% 45%, 10% 48%, 15% 42%, 20% 45%, 
         30% 40%, 40% 43%, 50% 38%, 60% 42%, 70% 35%, 

@@ -285,7 +285,7 @@
 
 	<div class="absolute inset-0 -z-10 flex items-center justify-center blur-3xl" aria-hidden="true">
 		<div
-			class="aspect-[1155/678] w-[100rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30"
+			class="aspect-[1155/678] w-[100rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 animate-spotlight"
 			style="clip-path: polygon(
             5% 5%, 15% 0%, 25% 10%, 35% 5%, 45% 15%, 
             55% 30%, 65% 25%, 75% 40%, 85% 10%, 95% 25%, 
