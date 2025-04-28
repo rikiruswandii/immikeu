@@ -13,7 +13,7 @@
 	const pathLengthFifth = useTransform(scrollYProgress, [0, 0.8], [0, 1.2]);
 </script>
 
-<div
+<div id="#about"
 	class="relative h-[400vh] w-full overflow-clip rounded-md bg-gradient-to-t from-black to-gray-900 py-40 dark:border dark:border-white/[0.1]"
 	bind:this={ref}
 >

@@ -36,7 +36,7 @@
 		></div>
 
 		<NavbarMenu>
-			<HoveredLink href="/#home" target="_self">Home</HoveredLink>
+			<HoveredLink href="/" target="_self">Home</HoveredLink>
 			<HoveredLink href="/#about" target="_self">About</HoveredLink>
 			<HoveredLink href="/#project" target="_self">Project</HoveredLink>
 			<MenuItem {active} item="Contact">

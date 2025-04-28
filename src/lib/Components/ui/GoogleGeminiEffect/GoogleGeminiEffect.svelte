@@ -26,11 +26,11 @@
 	<div
 		class="bg-red-transparent absolute -top-60 flex h-[890px] w-full items-center justify-center md:-top-35"
 	>
-		<button
+		<a href="#about"
 			class="z-30 mx-auto mt-8 w-fit rounded-full bg-white px-2 py-1 text-xs font-bold text-black md:mt-24 md:px-4 md:py-2 md:text-base"
 		>
 			let's start
-		</button>
+		</a>
 	</div>
 	<svg
 		width="1440"
