@@ -28,11 +28,6 @@
 </script>
 
 <div
-	data-aos="fade-up"
-	data-aos-delay="200"
-	data-aos-duration="1000"
-	data-aos-offset="100"
-	data-aos-easing="ease-in-out"
 	class={cn('w-full flex items-center justify-center', containerClassName)}
 	style="perspective: 1000px;"
 >

@@ -10,4 +10,6 @@
 <Divider />
 <About />
 <Divider />
+<TeckStack />
+<Divider />
 <Portfolio />

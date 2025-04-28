@@ -1,3 +1,8 @@
+<script>
+
+	import { AnimatedTooltip } from "./ui/AnimatedTooltip";
+
+</script>
 <section
 	id="about"
 	class="relative flex min-h-screen overflow-hidden rounded-md bg-black/[0.96] px-6 sm:px-10 md:px-20 lg:px-48 xl:px-60 2xl:px-72 antialiased bg-grid-white/[0.02] md:items-center md:justify-center"
@@ -51,7 +56,7 @@
 			data-aos-delay="100"
 			data-aos-offset="100"
 			data-aos-easing="ease-in-out"
-			class="mx-auto mt-4 max-w-4xl text-justify text-3xl font-normal text-neutral-300"
+			class="mx-auto mt-4 max-w-7xl text-justify p-8 rounded-lg text-3xl font-normal text-neutral-300 border-l-2 border-r-2 border-solid border-surface-light/50"
 		>
 			<strong class="font-semibold text-4xl">Hi! I'm Riki Ruswandi, also known as Mikeu.</strong><br
 			/><br />
@@ -79,40 +84,42 @@
 					class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
 				></div>
 
-				<a
-					href="/about"
-					role="button"
-					class="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block"
-				>
-					<span class="absolute inset-0 overflow-hidden rounded-full">
-						<span
-							class="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-						></span>
-					</span>
-					<div
-						class="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-3 px-7 ring-1 ring-white/10"
+				<AnimatedTooltip text="Read more about me">
+					<a
+						href="/about"
+						role="button"
+						class="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block"
 					>
-						<span class="text-xl text-neutral-300">Read more..</span>
-						<svg
-							width="24"
-							height="24"
-							viewBox="0 0 16 20"
-							fill="none"
-							xmlns="http://www.w3.org/2000/svg"
+						<span class="absolute inset-0 overflow-hidden rounded-full">
+							<span
+								class="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+							></span>
+						</span>
+						<div
+							class="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-3 px-7 ring-1 ring-white/10"
 						>
-							<path
-								stroke="currentColor"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								strokeWidth="1.5"
-								d="M10.75 8.75L14.25 12L10.75 15.25"
-							></path>
-						</svg>
-					</div>
-					<span
-						class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"
-					></span>
-				</a>
+							<span class="text-xl text-neutral-300">Read more..</span>
+							<svg
+								width="24"
+								height="24"
+								viewBox="0 0 16 20"
+								fill="none"
+								xmlns="http://www.w3.org/2000/svg"
+							>
+								<path
+									stroke="currentColor"
+									strokeLinecap="round"
+									strokeLinejoin="round"
+									strokeWidth="1.5"
+									d="M10.75 8.75L14.25 12L10.75 15.25"
+								></path>
+							</svg>
+						</div>
+						<span
+							class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"
+						></span>
+					</a>
+				</AnimatedTooltip>
 			</div>
 		</div>
 	</div>

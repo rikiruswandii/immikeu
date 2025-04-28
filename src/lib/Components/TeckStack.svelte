@@ -1,36 +1,90 @@
 <script lang="ts">
 	import { fade } from 'svelte/transition';
-	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import { faJs, faHtml5, faCss3Alt, faNodeJs } from '@fortawesome/free-brands-svg-icons';
-	import { faS } from '@fortawesome/free-solid-svg-icons';
+	import { Icon } from 'svelte-icons-pack';
+	import {
+		SiBootstrap,
+		SiCodeigniter,
+		SiCss3,
+		SiDocker,
+		SiGit,
+		SiGithub,
+		SiHtml5,
+		SiJavascript,
+		SiLaravel,
+		SiLeaflet,
+		SiNodedotjs,
+		SiOpenlayers,
+		SiSvelte,
+		SiTailwindcss,
+		SiTypescript,
+		SiVercel,
+		SiVuedotjs
+	} from 'svelte-icons-pack/si';
+	import { AnimatedTooltip } from './ui/AnimatedTooltip';
 
 	const techs = [
-		{ icon: faS, name: 'Svelte' },
-		{ icon: faJs, name: 'JavaScript' },
-		{ icon: faHtml5, name: 'HTML5' },
-		{ icon: faCss3Alt, name: 'CSS3' },
-		{ icon: faNodeJs, name: 'Node.js' }
+		{ icon: SiSvelte, name: 'Svelte', url: 'https://svelte.dev/' },
+		{
+			icon: SiJavascript,
+			name: 'JavaScript',
+			url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
+		},
+		{ icon: SiTypescript, name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
+		{ icon: SiCodeigniter, name: 'CodeIgniter', url: 'https://codeigniter.com/' },
+		{ icon: SiLaravel, name: 'Laravel', url: 'https://laravel.com/' },
+		{ icon: SiVuedotjs, name: 'Vue', url: 'https://vuejs.org/' },
+		{
+			icon: SiHtml5,
+			name: 'HTML5',
+			url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5'
+		},
+		{ icon: SiCss3, name: 'CSS3', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
+		{ icon: SiBootstrap, name: 'Bootstrap', url: 'https://getbootstrap.com/' },
+		{ icon: SiTailwindcss, name: 'Tailwind CSS', url: 'https://tailwindcss.com/' },
+		{ icon: SiNodedotjs, name: 'Node.js', url: 'https://nodejs.org/' },
+		{ icon: SiDocker, name: 'Docker', url: 'https://www.docker.com/' },
+		{ icon: SiGithub, name: 'Git', url: 'https://git-scm.com/' },
+		{ icon: SiGit, name: 'Github', url: 'https://github.com/' },
+		{ icon: SiLeaflet, name: 'Leaflet', url: 'https://leafletjs.com/' },
+		{ icon: SiOpenlayers, name: 'OpenLayers', url: 'https://openlayers.org/' },
+		{ icon: SiVercel, name: 'Vercel', url: 'https://vercel.com/' }
 	];
 </script>
 
-<section class="py-16 bg-gray-50" id="techstack">
+<section class="container min-h-screen mx-auto py-24" id="techstack">
 	<div class="max-w-6xl mx-auto px-4">
-		<h2 class="text-4xl font-bold text-center mb-12" in:fade={{ duration: 800 }}>My Techstack</h2>
+		<div class="flex justify-center mb-8">
+			<h1
+				data-aos="fade-up"
+				data-aos-duration="1000"
+				data-aos-offset="100"
+				data-aos-easing="ease-in-out"
+				class="inline-flex box-decoration-slice bg-gradient-to-r from-blue-400 to-pink-500 text-white px-2 text-center text-6xl font-bold md:text-7xl rounded"
+			>
+				My Teck Stack
+			</h1>
+		</div>
 
 		<div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-			{#each techs as { icon, name }, i}
-				<div
-					in:fade={{ duration: 800, delay: i * 200 }}
-					class="flex flex-col items-center justify-center p-6 bg-white rounded-2xl shadow-lg hover:scale-110 transition-transform duration-300 ease-in-out"
-				>
-					<FontAwesomeIcon {icon} class="text-5xl text-orange-500 mb-4" />
-					<span class="text-lg font-medium">{name}</span>
-				</div>
+			{#each techs as { icon, name, url }, i}
+				<AnimatedTooltip text={name}>
+					<a
+						href={url}
+						target="_blank"
+						data-aos="fade-up"
+						data-aos-delay={i * 100}
+						data-aos-duration="1000"
+						data-aos-offset="100"
+						data-aos-easing="ease-in-out"
+						class="flex
+					items-center justify-center p-2 bg-transparent rounded-lg border-l-2 border-r-2
+					border-solid border-surface-light/50 hover:scale-110 transition-transform duration-300
+					ease-in-out"
+					>
+						<Icon src={icon} color="#ffffff" size="3em" />
+					</a>
+				</AnimatedTooltip>
 			{/each}
 		</div>
 	</div>
 </section>
-
-<style>
-	/* Optional: Custom styles can be added here */
-</style>

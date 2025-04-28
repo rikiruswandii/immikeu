@@ -60,7 +60,8 @@
 		{
 			title: 'Unit Pengelolaan Irigasi D.I Jatiluhur',
 			image: '/images/upidijatiluhur.jpg',
-			description: 'Website developed for the Irrigation Management Unit (UPI) in the Jatiluhur region, with the aim of providing information and services related to irrigation. The website features two main pages: the Landing Page and the Dashboard Page. These pages offer various features to facilitate the management and monitoring of the irrigation system in Jatiluhur. In addition, UPI DI JATILUHUR includes a key mapping feature that allows users to view maps related to the irrigation system in the Jatiluhur region. This mapping feature makes it easier to monitor the condition of irrigation channels, water distribution points, and other related data visually, helping in more informed decision-making for irrigation management. Moreover, UPI DI JATILUHUR also provides a complaint feature, allowing the community to report issues or damages related to irrigation in their area. Users can submit complaints about blocked, damaged, or other irrigation-related problems, which will be forwarded to the relevant authorities for follow-up, ensuring that the irrigation system functions optimally.',
+			description:
+				'Website developed for the Irrigation Management Unit (UPI) in the Jatiluhur region, with the aim of providing information and services related to irrigation. The website features two main pages: the Landing Page and the Dashboard Page. These pages offer various features to facilitate the management and monitoring of the irrigation system in Jatiluhur. In addition, UPI DI JATILUHUR includes a key mapping feature that allows users to view maps related to the irrigation system in the Jatiluhur region. This mapping feature makes it easier to monitor the condition of irrigation channels, water distribution points, and other related data visually, helping in more informed decision-making for irrigation management. Moreover, UPI DI JATILUHUR also provides a complaint feature, allowing the community to report issues or damages related to irrigation in their area. Users can submit complaints about blocked, damaged, or other irrigation-related problems, which will be forwarded to the relevant authorities for follow-up, ensuring that the irrigation system functions optimally.',
 			teckstack: [
 				{
 					name: 'Laravel',
@@ -135,22 +136,17 @@
 			],
 			url: 'https://investasi.purwakartakab.go.id/',
 			isExpanded: false
-		},
+		}
 	];
 </script>
 
 <section
-	data-aos="fade-up"
-	data-aos-duration="1000"
-	data-aos-offset="100"
-	data-aos-easing="ease-in-out"
 	id="project"
 	class="relative min-h-screen min-w-full py-16 px-80 mx-auto max-w-6xl"
 >
 	<div class="flex justify-center mb-20">
 		<h1
 			data-aos="fade-up"
-			data-aos-delay="100"
 			data-aos-duration="1000"
 			data-aos-offset="100"
 			data-aos-easing="ease-in-out"
@@ -171,8 +167,15 @@
 
 	<!-- Pembungkus Project -->
 	<div class="columns-1 sm:columns-2 lg:columns-2 gap-8">
-		{#each data as project}
-			<div class="mb-8 break-inside-avoid">
+		{#each data as project, i}
+			<div
+				data-aos="fade-up"
+				data-aos-delay={i * 100}
+				data-aos-duration="1000"
+				data-aos-offset="100"
+				data-aos-easing="ease-in-out"
+				class="mb-8 break-inside-avoid"
+			>
 				<CardContainer className="relative w-full h-full">
 					<CardBody
 						className="relative bg-gray-50 group/card dark:hover:shadow-2xl dark:hover:shadow-emerald-500/[0.1] dark:bg-black dark:border-white/[0.2] border-black/[0.1] w-full h-full rounded-xl p-6 border transition-all duration-300"
