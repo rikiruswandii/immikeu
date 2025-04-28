@@ -19,14 +19,14 @@
 			{
 				position: 'Web Developer',
 				company: 'PT Pratama Solusi Teknologi',
-				period: 'May 2022 - Present',
+				period: 'May 2023 - Present',
 				description:
 					'Developing and maintaining scalable web applications using Laravel, JavaScript, and object storage services compatible with AWS S3 (such as MinIO).'
 			},
 			{
 				position: 'Web Developer (Intern)',
 				company: 'Dinas Komunikasi dan Informatika',
-				period: 'March 2022 - May 2022',
+				period: 'March 2023 - May 2022',
 				description:
 					'Assist in developing and maintaining web applications, collaborate with the team to build new features, and learn best practices in web development.'
 			}

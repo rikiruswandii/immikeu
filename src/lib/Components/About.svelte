@@ -4,7 +4,7 @@
 
 <section
 	id="about"
-	class="relative flex min-h-screen overflow-hidden rounded-md bg-black/[0.96] px-6 sm:px-10 md:px-20 lg:px-48 xl:px-60 2xl:px-72 antialiased bg-grid-white/[0.02] md:items-center md:justify-center"
+	class="relative flex min-h-screen py-24 overflow-hidden rounded-md bg-black/[0.96] px-6 sm:px-10 md:px-20 lg:px-48 xl:px-60 2xl:px-72 antialiased bg-grid-white/[0.02] md:items-center md:justify-center"
 >
 	<div class="absolute top-0 left-0 z-0 blur-3xl xl:top-10" aria-hidden="true">
 		<div
@@ -38,7 +38,7 @@
 		></div>
 	</div>
 
-	<div class="relative z-10 mx-auto min-w-full p-4 pt-20 md:pt-0">
+	<div class="relative z-10 mx-auto min-w-full p-4">
 		<div class="flex justify-center mb-8">
 			<h1
 				data-aos="fade-up"
@@ -68,7 +68,7 @@
 				>web development</strong
 			>
 			began in
-			<strong class="text-blue-300 underline decoration-solid decoration-pink-400">2022</strong>
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400">2023</strong>
 			during my college years when I joined an internship program at
 			<strong class="text-blue-300 underline decoration-solid decoration-pink-400"
 				>Dikominfo Purwakarta, Indonesia</strong

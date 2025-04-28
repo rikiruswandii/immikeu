@@ -65,7 +65,7 @@
 				data-aos-offset="100"
 				data-aos-easing="ease-in-out"
 				class="inline-flex box-decoration-slice bg-gradient-to-r from-blue-400 to-pink-500 text-white px-2 text-center text-6xl font-bold md:text-7xl rounded"
-			>
+			> 
 				My Tech Stack
 			</h1>
 		</div>
