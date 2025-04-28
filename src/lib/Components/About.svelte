@@ -1,8 +1,7 @@
 <script>
-
-	import { AnimatedTooltip } from "./ui/AnimatedTooltip";
-
+	import { AnimatedTooltip } from './ui/AnimatedTooltip';
 </script>
+
 <section
 	id="about"
 	class="relative flex min-h-screen overflow-hidden rounded-md bg-black/[0.96] px-6 sm:px-10 md:px-20 lg:px-48 xl:px-60 2xl:px-72 antialiased bg-grid-white/[0.02] md:items-center md:justify-center"
@@ -46,29 +45,67 @@
 				data-aos-duration="1000"
 				data-aos-offset="100"
 				data-aos-easing="ease-in-out"
-				class="inline-flex box-decoration-slice bg-gradient-to-r from-blue-400 to-pink-500 text-white px-2 text-center text-6xl font-bold md:text-7xl rounded"
+				class="inline-flex box-decoration-slice bg-gradient-to-r from-blue-400 to-pink-500 text-white px-2 text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold rounded"
 			>
 				WHO am I?
 			</h1>
 		</div>
 		<p
 			data-aos="fade-up"
+			data-aos-duration="1000"
 			data-aos-delay="100"
 			data-aos-offset="100"
 			data-aos-easing="ease-in-out"
-			class="mx-auto mt-4 max-w-7xl text-justify p-8 rounded-lg text-3xl font-normal text-neutral-300 border-l-2 border-r-2 border-solid border-surface-light/50"
+			class="mx-auto mt-4 max-w-full sm:max-w-7xl text-justify p-8 rounded-lg text-2xl sm:text-3xl font-normal text-neutral-300 border-l-2 border-r-2 border-solid border-surface-light/50"
 		>
-			<strong class="font-semibold text-4xl">Hi! I'm Riki Ruswandi, also known as Mikeu.</strong><br
+			Hi! I'm <strong class="text-blue-300 underline decoration-solid decoration-pink-400"
+				>Riki Ruswandi</strong
+			>, also known as
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400">Mikeu</strong
+			>.<br /><br />
+			My journey in
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400"
+				>web development</strong
+			>
+			began in
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400">2022</strong>
+			during my college years when I joined an internship program at
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400"
+				>Dikominfo Purwakarta, Indonesia</strong
+			>. That experience ignited my passion for the
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400">IT world</strong>
+			and led me to start working on
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400"
+				>independent projects</strong
+			>. Through
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400"
+				>hands-on experience</strong
+			>, I refined my skills and developed a deep enthusiasm for creating
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400"
+				>digital solutions</strong
+			>. I am excited by the continuous growth and challenges in the dynamic field of
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400"
+				>web development</strong
+			>.<br /><br />
+			Currently, I specialize in delivering
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400"
+				>high-quality solutions</strong
+			>
+			that not only meet but exceed client expectations at
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400">PST</strong>.<br
 			/><br />
-			My journey in web development began in 2022 during my college years when I joined an internship
-			program at Dikominfo Purwakarta, Indonesia. That experience ignited my passion for the IT world
-			and led me to start working on independent projects. Through hands-on experience, I refined my
-			skills and developed a deep enthusiasm for creating digital solutions. I am excited by the continuous
-			growth and challenges in the dynamic field of web development.<br /><br />
-			Currently, I specialize in delivering high-quality solutions that not only meet but exceed client
-			expectations at PST.<br /><br />
-			I am also pursuing a bachelor's degree in Informatics Engineering at
-			<span class="font-medium">STMIK Mardira Indonesia</span>.
+			I am also pursuing a
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400"
+				>bachelor's degree</strong
+			>
+			in
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400"
+				>Informatics Engineering</strong
+			>
+			at
+			<strong class="text-blue-300 underline decoration-solid decoration-pink-400"
+				>STMIK Mardira Indonesia</strong
+			>.
 		</p>
 
 		<!-- Tombol Demo -->
@@ -106,13 +143,7 @@
 								fill="none"
 								xmlns="http://www.w3.org/2000/svg"
 							>
-								<path
-									stroke="currentColor"
-									strokeLinecap="round"
-									strokeLinejoin="round"
-									strokeWidth="1.5"
-									d="M10.75 8.75L14.25 12L10.75 15.25"
-								></path>
+								<path stroke="currentColor" d="M10.75 8.75L14.25 12L10.75 15.25"></path>
 							</svg>
 						</div>
 						<span
@@ -123,6 +154,7 @@
 			</div>
 		</div>
 	</div>
+
 	<div class="absolute bottom-0 right-0 z-0 blur-3xl xl:-bottom-6" aria-hidden="true">
 		<div
 			class="aspect-1155/678 w-[72.1875rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 animate-spotlight"

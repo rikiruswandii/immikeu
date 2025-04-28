@@ -3,28 +3,6 @@
 
 	export let className: string | undefined = undefined;
 	export let containerClassName: string | undefined = undefined;
-	export let isMouseEntered = false;
-
-	let containerRef: HTMLDivElement;
-
-	const handleMouseMove = (e: MouseEvent) => {
-		if (!containerRef) return;
-		const { left, top, width, height } = containerRef.getBoundingClientRect();
-		const x = (e.clientX - left - width / 2) / 25;
-		const y = (e.clientY - top - height / 2) / 25;
-		containerRef.style.transform = `rotateY(${x}deg) rotateX(${y}deg)`;
-	};
-
-	const handleMouseEnter = (e: MouseEvent) => {
-		isMouseEntered = true;
-		if (!containerRef) return;
-	};
-
-	const handleMouseLeave = (e: MouseEvent) => {
-		if (!containerRef) return;
-		isMouseEntered = false;
-		containerRef.style.transform = `rotateY(0deg) rotateX(0deg)`;
-	};
 </script>
 
 <div

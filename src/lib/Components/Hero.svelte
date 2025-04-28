@@ -1,140 +1,116 @@
 <script lang="ts">
-	import { onMount } from 'svelte';
 	import { PUBLIC_SITE_NAME } from '$env/static/public';
 	import { fly, fade } from 'svelte/transition';
 	import { WavyBackground } from './ui/WavyBackground';
 	import { AnimatedTooltip } from './ui/AnimatedTooltip';
 
-	let isClient = false;
 	const siteName = PUBLIC_SITE_NAME || 'Mikeu';
-
-	onMount(async () => {
-		isClient = true;
-		await import('@google/model-viewer');
-	});
+	const letters = siteName.split('');
 </script>
 
-<WavyBackground blur={8} className="pb-40">
-	<section id="#home" class="py-20 text-center flex flex-col justify-center items-center">
-		<div
-			data-aos="fade-down"
-			data-aos-duration="1000"
-			data-aos-offset="150"
-			data-aos-easing="ease-in-out"
-			class="absolute inset-x-0 -top-90 z-0 blur-3xl"
-			aria-hidden="true"
-		>
-			<div
-				class="aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#38bdf8] to-[#e879f9] opacity-30 animate-spotlight"
-				style="clip-path: polygon(
-            0% 20%, 10% 10%, 30% 0%, 50% 10%, 70% 5%, 
-            90% 15%, 100% 30%, 90% 40%, 80% 45%, 70% 40%, 
-            50% 40%, 30% 50%, 10% 40%, 0% 30%
-        )"
-			></div>
-		</div>
-
-		<header
-			class="grid grid-cols-[auto_1fr_auto] items-center gap-4 w-full max-w-7xl mx-auto px-4 relative"
-		>
-			{#if isClient}
-				<div class="flex justify-center">
-					<model-viewer
-						src="/models/icecream.glb"
-						alt="3D Ice Cream"
-						auto-rotate
-						camera-controls
-						shadow-intensity="1"
-						exposure="0.9"
-						disable-pan
-						disable-zoom
-						style="width: 300px; height: 300px; z-index: 10;"
-					></model-viewer>
-				</div>
-			{/if}
-
-			<h1
-				in:fly={{ y: 20, duration: 800, opacity: 0 }}
-				class="bg-opacity-50 bg-gradient-to-b from-neutral-50 to-neutral-200 text-shadow-lg/20 bg-clip-text text-center text-[12rem] font-bold text-transparent md:text-[12rem] antialiased float"
+<WavyBackground blur={15} className="pb-40">
+	<section id="#home" class="py-20 text-center flex flex-col justify-center items-center relative">
+		<div class="flex flex-col items-center justify-center relative mt-20 sm:mt-40 md:mt-60">
+			<header
+				class="grid grid-cols-[auto_1fr_auto] items-center gap-4 w-full max-w-7xl mx-auto relative"
 			>
-				I'm <span>{siteName}</span>
-			</h1>
+				<h1
+					data-aos="fade-left"
+					data-aos-duration="1000"
+					data-aos-delay="100"
+					data-aos-offset="100"
+					data-aos-easing="ease-in-out"
+					in:fly={{ y: 20, duration: 800, opacity: 0 }}
+					class="box-decoration-slice bg-gradient-to-r from-blue-400 to-pink-500 text-white px-8 text-center text-[5rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] font-bold rounded-lg text-nowrap float -rotate-45 z-10"
+				>
+					I'm
+				</h1>
+				{#each letters as letter, index}
+					<h1
+						data-aos="fade-up"
+						data-aos-duration="1000"
+						data-aos-delay={index * 100}
+						data-aos-offset="100"
+						data-aos-easing="ease-in-out"
+						in:fly={{ y: 20, duration: 800, opacity: 0 }}
+						class="box-decoration-slice bg-gradient-to-r from-blue-400 to-pink-500 text-white px-4 text-center text-[5rem] sm:text-[6rem] md:text-[8rem] lg:text-[10rem] font-bold rounded-lg text-nowrap float"
+						style={index === 2 ? 'z-index: 20;' : ''}
+					>
+						<span>{letter}</span>
+					</h1>
+				{/each}
+			</header>
 
-			<!-- Kolom kanan kosong -->
-			<div></div>
-		</header>
-
-		<article
-			in:fade={{ duration: 1000 }}
-			class="z-10 absolute top-2/3 left-1/2 transform -translate-x-1/2 -translate-y-1/2"
-		>
-			<p class="max-w-9xl text-2xl font-normal text-neutral-300 text-shadow-lg/15">
-				EYYOO.. My Name Is <span class="font-semibold">Riki Ruswandi</span>, Welcome To My Personal
-				Website
-			</p>
-			<!-- Tombol Demo -->
-			<div class="flex justify-center mt-8">
-				<div class="relative inline-flex group">
-					<div
-						class="absolute transitiona-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
-					></div>
-					<AnimatedTooltip text="My resume page">
-						<a
-							href="/resume"
-							role="button"
-							class="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block"
-						>
-							<span class="absolute inset-0 overflow-hidden rounded-full">
-								<span
-									class="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
-								></span>
-							</span>
-							<div
-								class="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-3 px-7 ring-1 ring-white/10"
+			<article in:fade={{ duration: 1000 }} class="max-w-full mt-10">
+				<p
+					data-aos="fade-up"
+					data-aos-duration="1000"
+					data-aos-delay="150"
+					data-aos-offset="100"
+					data-aos-easing="ease-in-out"
+					class="text-xl sm:text-xl md:text-5xl lg:text-6xl font-bold text-surface-light text-shadow-lg text-nowrap"
+				>
+					EYYOO.. My Name Is <strong
+						class="text-blue-300 underline decoration-solid decoration-pink-400"
+						>Riki Ruswandi</strong
+					>,
+				</p>
+				<p
+					data-aos="fade-up"
+					data-aos-duration="1000"
+					data-aos-delay="180"
+					data-aos-offset="100"
+					data-aos-easing="ease-in-out"
+					class="text-xl sm:text-xl md:text-5xl lg:text-6xl font-bold text-surface-light text-shadow-lg text-nowrap"
+				>
+					Welcome To My Personal Website
+				</p>
+				<!-- Tombol Demo -->
+				<div
+					data-aos="fade-up"
+					data-aos-duration="1000"
+					data-aos-delay="200"
+					data-aos-offset="100"
+					data-aos-easing="ease-in-out"
+					class="flex justify-center mt-8"
+				>
+					<div class="relative inline-flex group">
+						<div
+							class="absolute transition-all duration-1000 opacity-70 -inset-px bg-gradient-to-r from-[#44BCFF] via-[#FF44EC] to-[#FF675E] rounded-xl blur-lg group-hover:opacity-100 group-hover:-inset-1 group-hover:duration-200 animate-tilt"
+						></div>
+						<AnimatedTooltip text="My resume page">
+							<a
+								href="/#about"
+								role="button"
+								class="bg-slate-800 no-underline group cursor-pointer relative shadow-2xl shadow-zinc-900 rounded-full p-px text-xs font-semibold leading-6 text-white inline-block"
 							>
-								<span class="text-xl text-neutral-300">Resume</span>
-								<svg
-									width="24"
-									height="24"
-									viewBox="0 0 16 20"
-									fill="none"
-									xmlns="http://www.w3.org/2000/svg"
+								<span class="absolute inset-0 overflow-hidden rounded-full">
+									<span
+										class="absolute inset-0 rounded-full bg-[image:radial-gradient(75%_100%_at_50%_0%,rgba(56,189,248,0.6)_0%,rgba(56,189,248,0)_75%)] opacity-0 transition-opacity duration-500 group-hover:opacity-100"
+									></span>
+								</span>
+								<div
+									class="relative flex space-x-2 items-center z-10 rounded-full bg-zinc-950 py-3 px-7 ring-1 ring-white/10"
 								>
-									<path
-										stroke="currentColor"
-										strokeLinecap="round"
-										strokeLinejoin="round"
-										strokeWidth="1.5"
-										d="M10.75 8.75L14.25 12L10.75 15.25"
-									></path>
-								</svg>
-							</div>
-							<span
-								class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"
-							></span>
-						</a>
-					</AnimatedTooltip>
+									<span class="text-xl text-neutral-300">Start</span>
+									<svg
+										width="24"
+										height="24"
+										viewBox="0 0 16 20"
+										fill="none"
+										xmlns="http://www.w3.org/2000/svg"
+									>
+										<path stroke="currentColor" d="M10.75 8.75L14.25 12L10.75 15.25"></path>
+									</svg>
+								</div>
+								<span
+									class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"
+								></span>
+							</a>
+						</AnimatedTooltip>
+					</div>
 				</div>
-			</div>
-		</article>
-		<div
-			data-aos="fade-up"
-			data-aos-duration="1000"
-			data-aos-offset="150"
-			data-aos-easing="ease-in-out"
-			class="absolute inset-x-0 -bottom-[500px] z-0 blur-3xl"
-			aria-hidden="true"
-		>
-			<div
-				class="aspect-[1155/678] w-[80rem] bg-gradient-to-tr from-[#38bdf8] to-[#e879f9] opacity-30 animate-spotlight"
-				style="clip-path: polygon(
-        0% 50%, 5% 45%, 10% 48%, 15% 42%, 20% 45%, 
-        30% 40%, 40% 43%, 50% 38%, 60% 42%, 70% 35%, 
-        80% 38%, 90% 33%, 100% 36%, 100% 66%, 90% 63%, 
-        80% 68%, 70% 63%, 60% 68%, 50% 62%, 40% 67%, 
-        30% 62%, 20% 65%, 15% 60%, 10% 63%, 5% 58%, 0% 60%
-    )"
-			></div>
+			</article>
 		</div>
 	</section>
 </WavyBackground>

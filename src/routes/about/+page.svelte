@@ -7,7 +7,7 @@
 	const profile = {
 		name: me,
 		title: 'Web Developer',
-		about: `I am a Web Developer currently pursuing a Bachelor's degree in Computer Engineering through a credit transfer program. After completing my Associate's degree, I continued my studies at STMIK Mardira in Bandung, specializing in a field aligned with my interests. I aspire to become a Senior Web Application Developer and have a keen interest in Reverse Engineering.`,
+		about: `I am a <strong class="text-blue-300 underline decoration-solid decoration-pink-400">Web Developer</strong> currently pursuing a <strong class="text-blue-300 underline decoration-solid decoration-pink-400">Bachelor's degree</strong> in <strong class="text-blue-300 underline decoration-solid decoration-pink-400">Computer Engineering</strong> through a credit transfer program. After completing my <strong class="text-blue-300 underline decoration-solid decoration-pink-400">Associate's degree</strong>, I continued my studies at <strong class="text-blue-300 underline decoration-solid decoration-pink-400">STMIK Mardira</strong> in <strong class="text-blue-300 underline decoration-solid decoration-pink-400">Bandung</strong>, specializing in a field aligned with my interests. I aspire to become a <strong class="text-blue-300 underline decoration-solid decoration-pink-400">Senior Web Application Developer</strong> and have a keen interest in <strong class="text-blue-300 underline decoration-solid decoration-pink-400">Reverse Engineering</strong>.`,
 		personalInfo: {
 			Email: 'rikiruswandi28@gmail.com',
 			Linkedin: 'https://www.linkedin.com/in/riki-ruswandi',
@@ -27,7 +27,8 @@
 				position: 'Web Developer (Intern)',
 				company: 'Dinas Komunikasi dan Informatika',
 				period: 'March 2022 - May 2022',
-				description: 'Assist in developing and maintaining web applications, collaborate with the team to build new features, and learn best practices in web development.'
+				description:
+					'Assist in developing and maintaining web applications, collaborate with the team to build new features, and learn best practices in web development.'
 			}
 		],
 
@@ -64,14 +65,14 @@
 	<div
 		class="relative z-10 bg-transparent rounded-lg shadow-lg p-10 transition-colors duration-300 mt-12"
 	>
-		<div class="grid grid-cols-6 mb-4">
+		<div class="grid grid-cols-1 sm:grid-cols-6 gap-4 mb-4">
 			<!-- Header Section -->
 			<div
 				data-aos="fade-right"
 				data-aos-duration="1000"
 				data-aos-offset="100"
 				data-aos-easing="ease-in-out"
-				class="flex-col justify-left items-center"
+				class="flex flex-col items-center justify-left"
 			>
 				<img
 					aria-hidden="true"
@@ -86,7 +87,7 @@
 				</h2>
 			</div>
 			<div class="col-span-5 text-center mb-12">
-				<div class="flex-col justify-center items-center">
+				<div class="flex flex-col justify-center items-center">
 					<h1
 						data-aos="fade-down"
 						data-aos-duration="1000"
@@ -112,7 +113,7 @@
 		<!-- Grid Content -->
 		<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mx-auto">
 			<!-- Sidebar -->
-			<div class="col-span-2 space-y-8">
+			<div class="col-span-1 md:col-span-2 space-y-8">
 				<!-- Personal Introduction -->
 				<div
 					data-aos="fade-right"
@@ -130,7 +131,9 @@
 						</h1>
 						<div class="flex-1 border-b border-surface-light/50"></div>
 					</div>
-					<p class="mt-2 text-base text-shadow-surface-light font-semibold">{profile.about}</p>
+					<p class="mt-2 text-base text-shadow-surface-light font-semibold">
+						{@html profile.about}
+					</p>
 				</div>
 
 				<!-- Personal Information -->
@@ -150,7 +153,7 @@
 						</h1>
 						<div class="flex-1 border-b border-surface-light/50"></div>
 					</div>
-					<div class="mt-2 grid grid-cols-2 gap-2">
+					<div class="mt-2 grid grid-cols-1 sm:grid-cols-2 gap-2">
 						{#each Object.entries(profile.personalInfo) as [key, value]}
 							{#if key === 'Email'}
 								<div class="flex items-center space-x-2">
@@ -202,8 +205,9 @@
 						{#each profile.skills as skill}
 							<span
 								class="text-sm font-bold mr-2 inline-flex box-decoration-slice bg-gradient-to-r from-blue-400 to-pink-500 text-surface-dark px-2 py-1 text-left rounded"
-								>{skill}</span
 							>
+								{skill}
+							</span>
 						{/each}
 					</div>
 				</div>

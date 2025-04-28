@@ -45,7 +45,6 @@
 						>Linkedin</HoveredLink
 					>
 					<HoveredLink href="https://github.com/rikiruswandii" target="_blank">Github</HoveredLink>
-					<HoveredLink href="#">Contact Now</HoveredLink>
 				</div>
 			</MenuItem>
 		</NavbarMenu>

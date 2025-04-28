@@ -142,7 +142,7 @@
 
 <section
 	id="project"
-	class="relative min-h-screen min-w-full py-16 px-80 mx-auto max-w-6xl"
+	class="relative min-h-screen min-w-full py-16 px-4 sm:px-16 md:px-60 mx-auto max-w-7xl"
 >
 	<div class="flex justify-center mb-20">
 		<h1
@@ -150,7 +150,7 @@
 			data-aos-duration="1000"
 			data-aos-offset="100"
 			data-aos-easing="ease-in-out"
-			class="text-center text-6xl md:text-7xl font-bold leading-none relative"
+			class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-none relative"
 		>
 			<span
 				class="inline-block relative z-10 px-4 py-2 rounded bg-gradient-to-r from-blue-400 to-pink-500 text-white"
@@ -166,7 +166,7 @@
 	</div>
 
 	<!-- Pembungkus Project -->
-	<div class="columns-1 sm:columns-2 lg:columns-2 gap-8">
+	<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8">
 		{#each data as project, i}
 			<div
 				data-aos="fade-up"
@@ -174,7 +174,7 @@
 				data-aos-duration="1000"
 				data-aos-offset="100"
 				data-aos-easing="ease-in-out"
-				class="mb-8 break-inside-avoid"
+				class="mb-8 break-inside-avoid z-20"
 			>
 				<CardContainer className="relative w-full h-full">
 					<CardBody
@@ -182,7 +182,7 @@
 					>
 						<CardItem
 							translateZ="50"
-							className="text-xl font-bold text-neutral-600 dark:text-white"
+							className="text-blue-300 underline decoration-solid decoration-pink-400 font-bold"
 						>
 							{project.title}
 						</CardItem>
@@ -194,7 +194,7 @@
 								<p>{project.description}</p>
 								<button
 									on:click={() => (project.isExpanded = false)}
-									class="text-blue-500 text-xs mt-2"
+									class="text-blue-300 text-xs mt-2"
 								>
 									Read less
 								</button>
@@ -204,7 +204,7 @@
 								</p>
 								<button
 									on:click={() => (project.isExpanded = true)}
-									class="text-blue-500 text-xs mt-2"
+									class="text-blue-300 text-xs mt-2"
 								>
 									Read more..
 								</button>
@@ -267,9 +267,6 @@
 										>
 											<path
 												stroke="currentColor"
-												strokeLinecap="round"
-												strokeLinejoin="round"
-												strokeWidth="1.5"
 												d="M10.75 8.75L14.25 12L10.75 15.25"
 											></path>
 										</svg>
@@ -286,7 +283,7 @@
 		{/each}
 	</div>
 
-	<div class="absolute inset-0 -z-10 flex items-center justify-center blur-3xl" aria-hidden="true">
+	<div class="absolute inset-0 z-10 flex items-center justify-center blur-3xl" aria-hidden="true">
 		<div
 			class="aspect-[1155/678] w-[100rem] bg-gradient-to-tr from-[#ff80b5] to-[#9089fc] opacity-30 animate-spotlight"
 			style="clip-path: polygon(
@@ -300,3 +297,4 @@
 		></div>
 	</div>
 </section>
+
