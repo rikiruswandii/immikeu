@@ -1,8 +1,5 @@
 <script lang="ts">
 	import '../app.css';
-	import Hero from '$lib/Components/Hero.svelte';
-	import About from '$lib/Components/About.svelte';
-	import Portfolio from '$lib/Components/Portfolio.svelte';
 	import Footer from '$lib/Components/Footer.svelte';
 	import Header from '$lib/Components/Header.svelte';
 	import AOS from 'aos';
@@ -12,6 +9,7 @@
 
 	// Inisialisasi AOS saat mount
 	import { onMount } from 'svelte';
+	import { ScrollToTop } from '$lib/Components/ui/ScrollToTop';
 	onMount(() => {
 		AOS.init({
 			duration: 800, // durasi animasi (ms)
@@ -27,3 +25,4 @@
 	</main>
 	<Footer />
 </div>
+<ScrollToTop />

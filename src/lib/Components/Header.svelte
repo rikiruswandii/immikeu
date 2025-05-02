@@ -1,8 +1,9 @@
 <script lang="ts">
 	import { NavbarMenu, HoveredLink, MenuItem, ProductItem } from '$lib/Components/ui/NavbarMenu';
+	import { onMount } from 'svelte';
 
 	let active: string | null = null;
-	let showNavbar = true;
+	let showNavbar = $state(true);
 	let scrollTimeout: ReturnType<typeof setTimeout>;
 
 	const handleScroll = () => {
@@ -14,15 +15,16 @@
 		}, 200);
 	};
 
-	// Pasang scroll listener saat komponen dimount
-	import { onMount } from 'svelte';
-
 	onMount(() => {
 		window.addEventListener('scroll', handleScroll);
 		return () => {
 			window.removeEventListener('scroll', handleScroll);
 		};
 	});
+
+	const navigateTo = (target: string) => {
+		window.location.hash = target;
+	};
 </script>
 
 <div class="relative flex w-full items-center justify-center">
@@ -36,7 +38,9 @@
 		></div>
 
 		<NavbarMenu>
-			<HoveredLink href="/" target="_self">Home</HoveredLink>
+			<HoveredLink href="/" target="_self">
+				Home
+			</HoveredLink>
 			<HoveredLink href="/#about" target="_self">About</HoveredLink>
 			<HoveredLink href="/#project" target="_self">Project</HoveredLink>
 			<MenuItem {active} item="Contact">
@@ -45,6 +49,7 @@
 						>Linkedin</HoveredLink
 					>
 					<HoveredLink href="https://github.com/rikiruswandii" target="_blank">Github</HoveredLink>
+					<HoveredLink href="/#contact">Contact Now</HoveredLink>
 				</div>
 			</MenuItem>
 		</NavbarMenu>
