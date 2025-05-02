@@ -58,15 +58,24 @@
 
 <section class="container min-h-screen mx-auto py-24" id="techstack">
 	<div class="max-w-6xl mx-auto px-4">
-		<div class="flex justify-center mb-8">
+		<div class="flex justify-center mb-20">
 			<h1
 				data-aos="fade-up"
 				data-aos-duration="1000"
 				data-aos-offset="100"
 				data-aos-easing="ease-in-out"
-				class="inline-flex box-decoration-slice bg-gradient-to-r from-blue-400 to-pink-500 text-white px-2 text-center text-6xl font-bold md:text-7xl rounded"
-			> 
-				My Tech Stack
+				class="text-center text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold leading-none relative"
+			>
+				<span
+					class="inline-block relative z-10 px-4 py-2 rounded bg-gradient-to-r from-blue-400 to-pink-500 text-white"
+				>
+					My Tech
+				</span><br />
+				<span
+					class="inline-block -mt-3 relative z-0 px-4 py-2 rounded bg-gradient-to-r from-blue-400 to-pink-500 text-white"
+				>
+					Stack
+				</span>
 			</h1>
 		</div>
 
@@ -94,4 +103,3 @@
 		</div>
 	</div>
 </section>
-
