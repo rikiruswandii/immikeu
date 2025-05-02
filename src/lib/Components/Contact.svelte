@@ -5,10 +5,32 @@
 	let email = '';
 	let message = '';
 
-	function sendMessage() {
-		console.log('Email:', email);
-		console.log('Message:', message);
-		showModal = false;
+	async function sendMessage() {
+		try {
+			const response = await fetch('/api/contact', {
+				method: 'POST',
+				headers: {
+					'Content-Type': 'application/json'
+				},
+				body: JSON.stringify({ email, message })
+			});
+
+			const result = await response.json();
+
+			if (!response.ok) {
+				console.error('Validasi Gagal:', result.errors);
+				alert(result.error || 'Gagal mengirim pesan');
+				return;
+			}
+
+			alert(result.message);
+			email = '';
+			message = '';
+			showModal = false;
+		} catch (error) {
+			console.error('Terjadi kesalahan:', error);
+			alert('Terjadi kesalahan saat mengirim pesan.');
+		}
 	}
 </script>
 
