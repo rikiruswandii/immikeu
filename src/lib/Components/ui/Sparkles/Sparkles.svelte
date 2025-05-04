@@ -13,7 +13,7 @@
 	function getRandomValue() {
 		return minSize + Math.random() * (maxSize - minSize);
 	}
-</script>
+</script> 
 
 <div class={cn('relative h-48', className)}>
 	<div class="absolute inset-0">
