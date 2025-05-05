@@ -1,15 +1,8 @@
 <script lang="ts">
 	import { CardBody, CardContainer, CardItem } from './ui/ThreeDCardEffect';
-	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	import {
-		faVuejs,
-		faCss3Alt,
-		faLaravel,
-		faBootstrap,
-		faReact
-	} from '@fortawesome/free-brands-svg-icons';
-	import { faC, faLeaf, faN } from '@fortawesome/free-solid-svg-icons';
+	import { Icon } from 'svelte-icons-pack';
 	import { AnimatedTooltip } from './ui/AnimatedTooltip';
+	import { SiBootstrap, SiCodeigniter, SiLaravel, SiLeaflet, SiNextdotjs, SiReact, SiTailwindcss, SiVuedotjs } from 'svelte-icons-pack/si';
 
 	let data = [
 		{
@@ -20,12 +13,12 @@
 			teckstack: [
 				{
 					name: 'Vue',
-					icon: faVuejs,
+					icon: SiVuedotjs,
 					url: 'https://vuejs.org/'
 				},
 				{
 					name: 'Tailwind CSS',
-					icon: faCss3Alt,
+					icon: SiTailwindcss,
 					url: 'https://tailwindcss.com/'
 				}
 			],
@@ -40,17 +33,17 @@
 			teckstack: [
 				{
 					name: 'Laravel',
-					icon: faLaravel,
+					icon: SiLaravel,
 					url: 'laravel.com'
 				},
 				{
 					name: 'Bootstrap',
-					icon: faBootstrap,
+					icon: SiBootstrap,
 					url: 'bootstrap.com'
 				},
 				{
 					name: 'Leaflet',
-					icon: faLeaf,
+					icon: SiLeaflet,
 					url: 'leafletjs.com'
 				}
 			],
@@ -65,17 +58,17 @@
 			teckstack: [
 				{
 					name: 'Laravel',
-					icon: faLaravel,
+					icon: SiLaravel,
 					url: 'laravel.com'
 				},
 				{
 					name: 'Bootstrap',
-					icon: faBootstrap,
+					icon: SiBootstrap,
 					url: 'bootstrap.com'
 				},
 				{
 					name: 'Leaflet',
-					icon: faLeaf,
+					icon: SiLeaflet,
 					url: 'leafletjs.com'
 				}
 			],
@@ -90,22 +83,22 @@
 			teckstack: [
 				{
 					name: 'Next js',
-					icon: faN,
+					icon: SiNextdotjs,
 					url: 'nextjs.org'
 				},
 				{
 					name: 'React',
-					icon: faReact,
+					icon: SiReact,
 					url: 'react.dev'
 				},
 				{
 					name: 'Tailwind CSS',
-					icon: faCss3Alt,
+					icon: SiTailwindcss,
 					url: 'https://tailwindcss.com/'
 				},
 				{
 					name: 'Leaflet',
-					icon: faLeaf,
+					icon: SiLeaflet,
 					url: 'leafletjs.com'
 				}
 			],
@@ -120,17 +113,17 @@
 			teckstack: [
 				{
 					name: 'Codeigniter 4',
-					icon: faC,
+					icon: SiCodeigniter,
 					url: 'codeigniter.com'
 				},
 				{
 					name: 'Bootstrap',
-					icon: faBootstrap,
+					icon: SiBootstrap,
 					url: 'bootstrap.com'
 				},
 				{
 					name: 'Leaflet',
-					icon: faLeaf,
+					icon: SiLeaflet,
 					url: 'leafletjs.com'
 				}
 			],
@@ -228,7 +221,7 @@
 											<div
 												class="flex items-center justify-center bg-gray-200 dark:bg-gray-700 p-1 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition"
 											>
-												<FontAwesomeIcon icon={tech.icon} class="w-6 h-6 text-surface-light" />
+												<Icon src={tech.icon} color="#ffffff" size="1.5rem" />
 											</div>
 										</a>
 									</AnimatedTooltip>
