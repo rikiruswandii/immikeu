@@ -1,0 +1,16 @@
+version: '3.8'
+
+services:
+  sveltekit:
+    build: .
+    container_name: immikeu
+    ports:
+      - "4173:4173"  # Expose port 3000 untuk mengakses aplikasi
+    environment:
+      # Jika ada variabel yang ingin didefinisikan langsung
+      NODE_ENV: production
+    env_file:
+      - .env  # Memuat variabel lingkungan dari file .env
+    volumes:
+      - .:/app  # Menghubungkan volume file aplikasi untuk sinkronisasi dengan container
+    command: npm run preview  # Jalankan aplikasi di mode preview

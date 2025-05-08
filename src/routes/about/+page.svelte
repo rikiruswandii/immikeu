@@ -1,9 +1,9 @@
 <script lang="ts">
-	import { PUBLIC_SITE_NAME } from '$env/static/public';
+	import { env } from '$env/dynamic/public';
 	import { faGithub, faLinkedinIn } from '@fortawesome/free-brands-svg-icons';
 	import { faEnvelope, faMapPin } from '@fortawesome/free-solid-svg-icons';
 	import { FontAwesomeIcon } from '@fortawesome/svelte-fontawesome';
-	let me = PUBLIC_SITE_NAME || 'Mikeu';
+	let me = env.PUBLIC_SITE_NAME || 'Mikeu';
 	const profile = {
 		name: me,
 		title: 'Web Developer',

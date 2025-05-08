@@ -2,9 +2,6 @@
 	import { Motion, useTransform, AnimatePresence, useMotionValue, useSpring } from 'svelte-motion';
 
 	export let text: string;
-	export let subtext: string = '';
-	export let offsetY: number = 16; // jarak tooltip dari elemen
-	export let placement: 'top' | 'bottom' = 'top';
 
 	let hovered = false;
 	const springConfig = { stiffness: 100, damping: 5 };
@@ -19,7 +16,7 @@
 	}
 </script>
 
-<div
+<div role="tooltip"
 	class="relative inline-block"
 	on:mouseenter={() => (hovered = true)}
 	on:mouseleave={() => (hovered = false)}
