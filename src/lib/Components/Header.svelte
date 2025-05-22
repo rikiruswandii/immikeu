@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { NavbarMenu, HoveredLink, MenuItem, ProductItem } from '$lib/Components/ui/NavbarMenu';
+	import { NavbarMenu, HoveredLink, MenuItem } from '$lib/Components/ui/NavbarMenu';
 	import { onMount } from 'svelte';
 
 	let active: string | null = null;
@@ -29,7 +29,7 @@
 
 <div class="relative flex w-full items-center justify-center">
 	<div
-		class={`fixed inset-x-0 top-8 z-50 mx-auto max-w-2xl transition-all duration-300 ease-in-out ${
+		class={`fixed inset-x-0 top-8 z-40 mx-auto max-w-2xl transition-all duration-300 ease-in-out ${
 			showNavbar ? 'opacity-100 translate-y-0' : 'opacity-0 -translate-y-full'
 		}`}
 	>
@@ -54,7 +54,7 @@
 			</MenuItem>
 		</NavbarMenu>
 		<span
-			class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40"
+			class="absolute -bottom-0 left-[1.125rem] h-px w-[calc(100%-2.25rem)] bg-gradient-to-r from-emerald-400/0 via-emerald-400/90 to-emerald-400/0 transition-opacity duration-500 group-hover:opacity-40 -z-0"
 		></span>
 	</div>
 </div>
