@@ -16,6 +16,7 @@
 		SiNextdotjs,
 		SiNodedotjs,
 		SiOpenlayers,
+		SiReact,
 		SiSvelte,
 		SiTailwindcss,
 		SiTypescript,
@@ -25,34 +26,52 @@
 	import { AnimatedTooltip } from './ui/AnimatedTooltip';
 
 	const techs = [
-		{ icon: SiSvelte, name: 'Svelte', url: 'https://svelte.dev/' },
+		{ icon: SiSvelte, name: 'Svelte', url: 'https://svelte.dev/', color: '#FF3E00' }, // terang & kontras
 		{
 			icon: SiJavascript,
 			name: 'JavaScript',
-			url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript'
-		},
-		{ icon: SiTypescript, name: 'TypeScript', url: 'https://www.typescriptlang.org/' },
-		{ icon: SiCodeigniter, name: 'CodeIgniter', url: 'https://codeigniter.com/' },
-		{ icon: SiLaravel, name: 'Laravel', url: 'https://laravel.com/' },
-		{ icon: SiNextdotjs, name: 'Next.js', url: 'https://nextjs.org/' },
-		{ icon: SiVuedotjs, name: 'Vue', url: 'https://vuejs.org/' },
+			url: 'https://developer.mozilla.org/en-US/docs/Web/JavaScript',
+			color: '#F7DF1E'
+		}, // tetap kontras
+		{
+			icon: SiTypescript,
+			name: 'TypeScript',
+			url: 'https://www.typescriptlang.org/',
+			color: '#42A5F5'
+		}, // lebih terang dari #3178C6
+		{ icon: SiCodeigniter, name: 'CodeIgniter', url: 'https://codeigniter.com/', color: '#FF5722' }, // lebih cerah
+		{ icon: SiLaravel, name: 'Laravel', url: 'https://laravel.com/', color: '#FF5555' },
+		{ icon: SiReact, name: 'React', url: 'https://react.dev/', color: '#42A5F5' },
+		{ icon: SiNextdotjs, name: 'Next.js', url: 'https://nextjs.org/', color: '#FFFFFF' }, // putih di background gelap
+		{ icon: SiVuedotjs, name: 'Vue', url: 'https://vuejs.org/', color: '#41B883' },
 		{
 			icon: SiHtml5,
 			name: 'HTML5',
-			url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5'
+			url: 'https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5',
+			color: '#FF5722'
 		},
-		{ icon: SiCss3, name: 'CSS3', url: 'https://developer.mozilla.org/en-US/docs/Web/CSS' },
-		{ icon: SiBootstrap, name: 'Bootstrap', url: 'https://getbootstrap.com/' },
-		{ icon: SiTailwindcss, name: 'Tailwind CSS', url: 'https://tailwindcss.com/' },
-		{ icon: SiNodedotjs, name: 'Node.js', url: 'https://nodejs.org/' },
-		{ icon: SiMysql, name: 'MySQL', url: 'https://www.mysql.com/' },
-		{ icon: SiFirebase, name: 'Firebase', url: 'https://firebase.google.com/' },
-		{ icon: SiDocker, name: 'Docker', url: 'https://www.docker.com/' },
-		{ icon: SiGithub, name: 'Git', url: 'https://git-scm.com/' },
-		{ icon: SiGit, name: 'Github', url: 'https://github.com/' },
-		{ icon: SiLeaflet, name: 'Leaflet', url: 'https://leafletjs.com/' },
-		{ icon: SiOpenlayers, name: 'OpenLayers', url: 'https://openlayers.org/' },
-		{ icon: SiVercel, name: 'Vercel', url: 'https://vercel.com/' }
+		{
+			icon: SiCss3,
+			name: 'CSS3',
+			url: 'https://developer.mozilla.org/en-US/docs/Web/CSS',
+			color: '#42A5F5'
+		},
+		{ icon: SiBootstrap, name: 'Bootstrap', url: 'https://getbootstrap.com/', color: '#BB86FC' }, // lebih terang dari ungu asli
+		{
+			icon: SiTailwindcss,
+			name: 'Tailwind CSS',
+			url: 'https://tailwindcss.com/',
+			color: '#5EEAD4'
+		}, // cyan terang
+		{ icon: SiNodedotjs, name: 'Node.js', url: 'https://nodejs.org/', color: '#8FBC8F' }, // hijau lebih cerah
+		{ icon: SiMysql, name: 'MySQL', url: 'https://www.mysql.com/', color: '#00B8D4' }, // biru terang
+		{ icon: SiFirebase, name: 'Firebase', url: 'https://firebase.google.com/', color: '#FFCA28' },
+		{ icon: SiDocker, name: 'Docker', url: 'https://www.docker.com/', color: '#4FC3F7' },
+		{ icon: SiGithub, name: 'Git', url: 'https://git-scm.com/', color: '#FF7043' }, // oranye terang
+		{ icon: SiGit, name: 'Github', url: 'https://github.com/', color: '#FFFFFF' }, // putih karena brand hitam
+		{ icon: SiLeaflet, name: 'Leaflet', url: 'https://leafletjs.com/', color: '#76FF03' }, // hijau neon
+		{ icon: SiOpenlayers, name: 'OpenLayers', url: 'https://openlayers.org/', color: '#80DEEA' }, // cyan muda
+		{ icon: SiVercel, name: 'Vercel', url: 'https://vercel.com/', color: '#FFFFFF' } // putih
 	];
 </script>
 
@@ -81,7 +100,7 @@
 
 		<!-- Grid layout responsif -->
 		<div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 xl:grid-cols-6 gap-8">
-			{#each techs as { icon, name, url }, i}
+			{#each techs as { icon, name, url, color }, i}
 				<AnimatedTooltip text={name}>
 					<a
 						href={url}
@@ -96,7 +115,7 @@
 							border-solid border-surface-light/50 hover:scale-110 transition-transform duration-300
 							ease-in-out"
 					>
-						<Icon src={icon} color="#ffffff" size="3em" />
+						<Icon src={icon} {color} size="3em" />
 					</a>
 				</AnimatedTooltip>
 			{/each}

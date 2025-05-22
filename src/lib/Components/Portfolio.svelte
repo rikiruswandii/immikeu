@@ -2,7 +2,16 @@
 	import { CardBody, CardContainer, CardItem } from './ui/ThreeDCardEffect';
 	import { Icon } from 'svelte-icons-pack';
 	import { AnimatedTooltip } from './ui/AnimatedTooltip';
-	import { SiBootstrap, SiCodeigniter, SiLaravel, SiLeaflet, SiNextdotjs, SiReact, SiTailwindcss, SiVuedotjs } from 'svelte-icons-pack/si';
+	import {
+		SiBootstrap,
+		SiCodeigniter,
+		SiLaravel,
+		SiLeaflet,
+		SiNextdotjs,
+		SiReact,
+		SiTailwindcss,
+		SiVuedotjs
+	} from 'svelte-icons-pack/si';
 
 	let data = [
 		{
@@ -14,11 +23,13 @@
 				{
 					name: 'Vue',
 					icon: SiVuedotjs,
+					color: '#41B883',
 					url: 'https://vuejs.org/'
 				},
 				{
 					name: 'Tailwind CSS',
 					icon: SiTailwindcss,
+					color: '#5EEAD4',
 					url: 'https://tailwindcss.com/'
 				}
 			],
@@ -34,16 +45,19 @@
 				{
 					name: 'Laravel',
 					icon: SiLaravel,
+					color: '#FF5555',
 					url: 'laravel.com'
 				},
 				{
 					name: 'Bootstrap',
 					icon: SiBootstrap,
+					color: '#BB86FC',
 					url: 'bootstrap.com'
 				},
 				{
 					name: 'Leaflet',
 					icon: SiLeaflet,
+					color: '#76FF03',
 					url: 'leafletjs.com'
 				}
 			],
@@ -59,16 +73,19 @@
 				{
 					name: 'Laravel',
 					icon: SiLaravel,
+					color: '#FF5555',
 					url: 'laravel.com'
 				},
 				{
 					name: 'Bootstrap',
 					icon: SiBootstrap,
+					color: '#BB86FC',
 					url: 'bootstrap.com'
 				},
 				{
 					name: 'Leaflet',
 					icon: SiLeaflet,
+					color: '#76FF03',
 					url: 'leafletjs.com'
 				}
 			],
@@ -84,21 +101,25 @@
 				{
 					name: 'Next js',
 					icon: SiNextdotjs,
+					color: '#FFFFFF',
 					url: 'nextjs.org'
 				},
 				{
 					name: 'React',
 					icon: SiReact,
+					color: '#42A5F5',
 					url: 'react.dev'
 				},
 				{
 					name: 'Tailwind CSS',
 					icon: SiTailwindcss,
+					color: '#5EEAD4',
 					url: 'https://tailwindcss.com/'
 				},
 				{
 					name: 'Leaflet',
 					icon: SiLeaflet,
+					color: '#76FF03',
 					url: 'leafletjs.com'
 				}
 			],
@@ -114,16 +135,19 @@
 				{
 					name: 'Codeigniter 4',
 					icon: SiCodeigniter,
+					color: '#FF5722',
 					url: 'codeigniter.com'
 				},
 				{
 					name: 'Bootstrap',
 					icon: SiBootstrap,
+					color: '#BB86FC',
 					url: 'bootstrap.com'
 				},
 				{
 					name: 'Leaflet',
 					icon: SiLeaflet,
+					color: '#76FF03',
 					url: 'leafletjs.com'
 				}
 			],
@@ -214,15 +238,11 @@
 						</CardItem>
 						<div class="mt-10 flex items-center justify-between">
 							<!-- Tech stack -->
-							<CardItem translateZ={20} translateX={-40} className="flex items-center space-x-2">
+							<CardItem translateZ={20} translateX={-40} className="flex items-center space-x-2 border-t border-b border-solid border-gray-600 py-1 px-4 rounded-lg">
 								{#each project.teckstack.slice(0, 5) as tech, i}
 									<AnimatedTooltip text={tech.name}>
 										<a href={tech.url} target="_blank" class="relative z-10">
-											<div
-												class="flex items-center justify-center bg-gray-200 dark:bg-gray-700 p-1 rounded-full hover:bg-gray-300 dark:hover:bg-gray-600 transition"
-											>
-												<Icon src={tech.icon} color="#ffffff" size="1.5rem" />
-											</div>
+											<Icon src={tech.icon} color={tech.color} size="1rem" className="transition-all duration-300 hover:-translate-y-2" />
 										</a>
 									</AnimatedTooltip>
 								{/each}
@@ -258,10 +278,7 @@
 											fill="none"
 											xmlns="http://www.w3.org/2000/svg"
 										>
-											<path
-												stroke="currentColor"
-												d="M10.75 8.75L14.25 12L10.75 15.25"
-											></path>
+											<path stroke="currentColor" d="M10.75 8.75L14.25 12L10.75 15.25"></path>
 										</svg>
 									</div>
 									<span
@@ -290,4 +307,3 @@
 		></div>
 	</div>
 </section>
-
